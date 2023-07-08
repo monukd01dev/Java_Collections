@@ -1,0 +1,57 @@
+List (ArrayList)
+
+Representation of non-generic and showing that its depricated way and using add, size and remove methods
+
+implementation of generic using string as type parameter to create list and showing how we cannot different data types and it will give error at compile time and demonstration of Itrator and for each loop and while and for loop also 
+
+
+--> adding elements using ArrayList constructor using Arrays class static method asList() this method returns the ArrayList
+
+--> demonstration of addAll() method
+
+--> demosntration of removeAll(List_reference) method this method is very scary when your both list have same number it will remove both the numbers 
+
+--> removeAll and addAll both used to add or remove collection not perticular element
+
+--> and if you have to remove all the elements from an ArrayList which have only one list we use clear() method
+
+--> boolean isEmpty() this method is used to check wheather list is empty or not...
+
+--> boolean contains(object) method demosntration 
+
+--> get(Index) method return the element at that index
+
+--> indexOf(element) returns the index of specifix element from start
+
+--> lastIndexOf(element) returns the index from last both the index methods will return -1 when they didn't find the element in the list
+
+-->You can replace the items at specific position using set method of ArrayList as below: list.set (your_index, your_item)
+
+--> Conversion of ArrayList into an Array using toArray() method and printing the object(array) using Arrays.toString(Targeted_Array) method 
+
+----> ArrayList methods have to do
+        -> clone()
+        -> subList() // returns ArrayList not List 
+        -> retainAll() only common things left of which we use this method
+        -> Array to ArrayList
+            -> adding the array in a list using addAll method through       Collections.addAll(Collection,Array);
+        -> Collections.shuffel(list)/Collections.shuffel(list,new Random())/ Collections.shuffel(list,new Random(2))
+        -> Collections.sort();
+        -> Reverse An ArrayList In Java
+            -> we use Collections.reverseOrder() on sorted list we can also do it on unsorted list other-wise it will print the list in reverseOrder
+
+--> remove duplicate from ArrayList two ways
+
+        -> Convert the list into treeset cause it doesn't contain duplicates and maintain the order
+        -> using stream api this help the coder to reduce the line of codes. stream is a sub package in util and inside it we have a class Collectors inside stream package 
+        -> all the methods we use in it will returns the list so we have to collect it inside the List interface variable 
+        -> Now how to do it first we change the list into the stream using stream() method then use distinct() by deferencing after that using collect() method we collect the output and then inside the  parameter of collect method we pass Collectors.toList() to convert it into list
+
+--> lamda expression in java or arrow functions in js whatever
+       -> list_reference.forEach(e->System.out.println(e));
+
+
+--> Demonstration of ArrayList of Userdefined object
+
+
+<----------------------------------------The End For Now--------------------------------------------Date:8/07/23>

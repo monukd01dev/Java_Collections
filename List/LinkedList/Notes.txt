@@ -1,0 +1,92 @@
+List (LinkedList)
+
+-> Implements Collection interface
+-> follow doubly linked list to store element
+-> store duplicate elements
+-> maintian the insertion order
+-> not Synchronized
+-> manipulation is faster because no shifting is required
+-> in java LinkedList can be used as a list,stack or queue
+
+--> LinkedList add methods
+     -> Collection
+          -> add()
+          -> as we know it maintain the insertion order we can use add(Index,element)
+          -> addAll(Collection)
+          -> addAll(Index,Collection)
+     -> LinkedList
+          -> addFirst()
+          -> addLast()
+
+--> remove methods
+     -->Commons
+          -> remove(Index)
+          -> remove(element)
+          -> removeAll(List)
+          -> clear()
+     -->LinkedList
+          -> removeFirst()
+          -> removeLast()
+          -> removeFirstOccurrence(element)
+          -> removeLastOccurrence(element)
+
+--> Reversing the list 
+     -->descendingIterator()
+
+--> Creating an List of userdefined class
+
+--> get methods of LinkedList
+     -> E getFirst()
+     -> E getLast()
+     -> E get(index)
+
+--> index of methods Commons
+     -> int indexOf(object/element);
+     -> int lastIndexOf(object/element);
+
+--> subList(index,index) method returns the list
+     -> changes done in the sublist will reflect on the original list
+     -> first index inclusive and last index exclusive
+
+-> ListIterator have same methods of Iterator and 2 extras
+     -> but before running these methods must have to run the old methods (hasNext() and next())
+     -> hasPrevious()
+     -> previous()
+
+-> Replacing element 
+     -> set(index,newElement)
+
+-> push() and pop() in LinkedList follows LIFO (For)
+     -> used to remove and return the top element from the stack represented by the LinkedList. The method simply pops out an element present at the top of the stack
+     -> these method remove and retrieve the list
+     -> and throw NoSuchElementException when list is empty
+
+-> poll methods of LinkedList (For retrieve and removing)
+     -> E poll() Retrieves and removes the head (first element) of the list
+     -> E pollFirst()
+     -> E pollLast()
+
+-> peek methods (For retrieving and seeing)
+     -> E peek()
+          -> This method returns the head of the list, or null if the list is empty.
+     -> E peekFirst()
+          -> This method retrieves, but does not remove, the first element of this list, or returns null if this list is empty. This works similar to peek().
+     -> E peekLast()
+          -> This method retrieves, but does not remove, the last element of this list, or returns null if this list is empty.
+
+
+-> offer methods (For Adding Elements)
+     -> boolean offer(E)
+          -> This method returns true and add the elemen at the tail of the list
+     -> boolean offerFirst(E)
+          -> add at head
+     -> boolean offerLast(E)
+          -> add at tail
+
+-> contains(E)
+     -> return true if element is present in the list
+
+-> Convert a LinkedList to ArrayList 
+
+-> Convert a LinkedList to Array 
+

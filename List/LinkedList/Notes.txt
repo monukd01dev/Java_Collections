@@ -58,6 +58,7 @@ List (LinkedList)
 
 -> push() and pop() in LinkedList follows LIFO (For)
      -> used to remove and return the top element from the stack represented by the LinkedList. The method simply pops out an element present at the top of the stack
+          -> only pop() method returns E and push() return type is void
      -> these method remove and retrieve the list
      -> and throw NoSuchElementException when list is empty
 
@@ -83,7 +84,7 @@ List (LinkedList)
      -> boolean offerLast(E)
           -> add at tail
 
--> contains(E)
+-> boolean contains(E)
      -> return true if element is present in the list
 
 -> Convert a LinkedList to ArrayList 

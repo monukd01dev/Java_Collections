@@ -1,0 +1,57 @@
+List (Vector)
+
+-> implements List Interface
+-> maintains the insertion order
+-> it is synchronized due to which it gives poor performance in searchng, adding, delete   and update of its elements.
+
+
+-> Three ways to create vector class object:
+    -> Method 1:
+
+        Syntax:
+        Vector vec = new Vector();
+
+        Explanation:
+        It creates an empty Vector with the default initial capacity of 10. It means the Vector will be re-sized
+        when the 11th elements needs to be inserted into the Vector. Note: By default vector doubles its size.
+        i.e. In this case the Vector size would remain 10 till 10 insertions and once we try to insert the 11th
+        element It would become 20 (double of default capacity 10).
+
+    -> Method 2:
+        Syntax:
+        Vector object= new Vector(int initialCapacity)
+
+        Example:
+        Vector vec = new Vector(3);
+        It will create a Vector of initial capacity of 3.
+
+    -> Method 3:
+
+        Syntax:
+        Vector object= new vector(int initialcapacity, capacitylncrement)
+
+        Example:
+        Vector vec= new Vector(4, 6)
+        Here we have provided two arguments. The initial capacity is 4 and capacitylncrement is 6. It means
+        upon insertion of 5th element the size would be 10 (4+6) and on 11th insertion it would be 16(10+6).
+
+==> important thing 
+    -> size() method returns the no of element present in vector
+    -> capacity() method returns the current capacity of the vector by default vector have initial capacity of 10
+
+
+--> Enumeration interface for iterating the vector elements
+    ->  as we use iterator() method of Iterable interface to use Iterator interface methods 
+        like hasNext() and next() to iterate over the vector
+
+    ->  in java.util.Vector.elements() method returns an enumeration of the elements of the Vector
+    ->  in Enumeration interface we have two methods hasMoreElement() and nextElement()
+
+--> subList()
+    ->  returns List
+
+--> sort()
+    ->  Collections.sort(List,Collections.reverseOrder());
+
+--> Index Methods of Vector
+    

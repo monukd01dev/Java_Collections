@@ -19,7 +19,7 @@ implementation of generic using string as type parameter to create list and show
 
 --> boolean contains(object) method demosntration 
 
---> get(Index) method return the element at that index
+--> E get(Index) method return the element at that index
 
 --> indexOf(element) returns the index of specifix element from start
 

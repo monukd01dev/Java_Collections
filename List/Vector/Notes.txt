@@ -38,6 +38,8 @@ List (Vector)
 ==> important thing 
     -> size() method returns the no of element present in vector
     -> capacity() method returns the current capacity of the vector by default vector have initial capacity of 10
+    -> ensureCapacity()  method ensures that the capacity of the vector is at least equal to the specified minimum capacity it can we usefull when you know that you are working with large number of data and you don't want vector to increase size again and again
+    -> trimToSize() this method trims the capacity of the vector to the current size
 
 
 --> Enumeration interface for iterating the vector elements
@@ -47,11 +49,92 @@ List (Vector)
     ->  in java.util.Vector.elements() method returns an enumeration of the elements of the Vector
     ->  in Enumeration interface we have two methods hasMoreElement() and nextElement()
 
---> subList()
+--> ListIterator in Vector
+    ->  before running hasPrevious and previous method we have to use hasNext and next method to completely iterate over the list and then in the   next loop you will nun below methods to print the reverse order
+    ->  to print the reverse order you have to iterate in forward direction first
+    ->  methods of ListIterator
+        ->  boolean hasNext()
+        ->  E next()
+        ->  boolean hasPrevious()
+        ->  E previous()
+
+--> Reversing the list using descendingIterator() method of Iterator Interface
+
+    Only the classes that implement the Deque interface can use the descendingIterator() method. This is because the descendingIterator() method is specifically designed for iterating over the elements of a deque in reverse order.
+
+    The Deque interface is a generic interface that represents a double-ended queue. This means that a deque can be used to insert and remove elements from both the front and the back of the queue. The descendingIterator() method is a convenient way to iterate over the elements of a deque in reverse order.
+
+    Here are some of the classes that implement the Deque interface:
+
+    ArrayDeque
+    LinkedList
+    PriorityQueue
+    ConcurrentLinkedDeque
+
+--> subList(Index{inclusive},Index{exclusive});
     ->  returns List
 
 --> sort()
     ->  Collections.sort(List,Collections.reverseOrder());
 
+--> Collections.reverse();
+    -> it takes collection as arguments
+
 --> Index Methods of Vector
-    
+
+    Search elements in Vector using index – Java example 
+
+    1. public int indexOf(Object o): It returns the index of first occurrence of Object o in Vector. 
+    2. public int indexOf(Object o, int startIndex): It returns the index of the first occurrence of the Object o 
+    in this vector, searching forwards from startIndex (inclusive). 
+    3. public int lastIndexOf(Object o): It returns the index of last occurrence of Object o in Vector. 
+    4. public int lastIndexOf(Object o, int startIndex): It returns the index of the last occurrence of the 
+    specified element in this vector, searching backwards from startIndex(inclusive)
+        
+--> Collections.copy(destinationList, sourceList);
+
+    --> method creates a shallow copy of the source list. A shallow copy means that the destination list contains references to the same objects as the source list. This means that if you change the elements of the source list, the changes will be reflected in the destination list.
+    --> The copy() method does a shallow copy of the elements. If the elements in the source list are mutable objects, changes to those objects will be reflected in both the source and destination lists.
+    --> The copy() method is useful when you want to replace the contents of an existing list with the elements from another list.
+
+
+    ->  The Collections.copy() method copies the elements of one collection to another collection.
+    ->  The Collections.copy() method takes two arguments: the source collection and the destination collection.
+    ->  The Collections.copy() method throws an IndexOutOfBoundsException if the destination collection is not large enough to accommodate all of the elements from the source collection.
+    ->  The Collections.copy() method throws a NullPointerException if either the source collection or the destination collection is null.
+
+    important
+        -> The Collections.copy() method requires that the destination collection be at least as large as the source collection. If the destination collection is empty, the Collections.copy() method will throw an IndexOutOfBoundsException
+
+--> first_vector.equals(second_vector)
+
+    -> Parameters: This method accepts a mandatory parameter second_vector which refers to the second Vector to be compared to the first Vector.
+
+    -> Return value: The method returns true if the equality holds and both the objects and vector are equal else it returns false.
+
+
+--> containAll(Collection c)
+
+    The java.util.vector.containsAll() method is used to check to check if this Vector contains all of the elements in the specified Collection. So basically it is used to check if a vector contains a set of elements or not.
+
+    Syntax:
+        Vector.containsAll(Collection col)
+
+    Parameters: This method accepts a mandatory parameter col which is of the type of vector. This is the collection whose elements are needed to be checked if it is present in the vector or not.
+
+    Return Value: The method returns True if all elements in the collection col are present in the vector otherwise it returns False.
+
+
+    Exception: The method throws NullPointerException if the specified collection is NULL
+
+
+--> copyInto(Array)
+
+    The java.util.vector.copyInto() method is used to copy all of the components from this vector to another array, having enough space to hold all of the components of the vector. It is to be noted that the index of the elements remains unchanged. The elements present in the array are replaced by the elements of the vector. 
+
+    Syntax:
+        Vector.copyInto(Object array[])
+        
+    Parameters: The parameter array[] is of the type of vector. This is the array into which the elements of the vector are to be copied. 
+
+    Return Value: The method is of void type and does not return any values. Exception: The method throws NullPointerException if the array is NULL.
